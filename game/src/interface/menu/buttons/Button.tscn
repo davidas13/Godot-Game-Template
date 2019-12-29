@@ -1,0 +1,52 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://assets/sprites/buttons/blue_button03.png" type="Texture" id=1]
+[ext_resource path="res://assets/sprites/buttons/blue_button02.png" type="Texture" id=2]
+[ext_resource path="res://assets/fonts/kenvector_future.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://assets/sprites/buttons/blue_button04.png" type="Texture" id=4]
+
+[sub_resource type="StyleBoxTexture" id=3]
+texture = ExtResource( 4 )
+region_rect = Rect2( 0, 0, 190, 49 )
+margin_left = 41.6077
+margin_right = 34.583
+margin_top = 10.0
+margin_bottom = 17.0
+
+[sub_resource type="StyleBoxTexture" id=4]
+texture = ExtResource( 1 )
+region_rect = Rect2( 0, 0, 190, 45 )
+margin_left = 33.2071
+margin_right = 33.5845
+margin_top = 16.6036
+margin_bottom = 17.7356
+
+[sub_resource type="StyleBoxTexture" id=1]
+texture = ExtResource( 2 )
+region_rect = Rect2( 0, 0, 190, 49 )
+margin_left = 51.0
+margin_right = 41.0
+margin_top = 15.0
+margin_bottom = 16.0
+
+[sub_resource type="DynamicFont" id=2]
+size = 32
+font_data = ExtResource( 3 )
+
+[node name="Button" type="Button"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -172.0
+margin_top = -40.0
+margin_right = 172.0
+margin_bottom = 40.0
+custom_styles/hover = SubResource( 3 )
+custom_styles/pressed = SubResource( 4 )
+custom_styles/normal = SubResource( 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Button"
+__meta__ = {
+"_edit_use_anchors_": false
+}
