@@ -1,0 +1,143 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://assets/sprites/buttons/blue_button03.png" type="Texture" id=1]
+[ext_resource path="res://assets/sprites/buttons/blue_button02.png" type="Texture" id=2]
+[ext_resource path="res://assets/fonts/kenvector_future.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://assets/sprites/buttons/blue_button04.png" type="Texture" id=4]
+[ext_resource path="res://src/interface/menu/buttons/Button.tscn" type="PackedScene" id=5]
+
+[sub_resource type="StyleBoxTexture" id=1]
+texture = ExtResource( 4 )
+region_rect = Rect2( 0, 0, 190, 49 )
+margin_left = 41.6077
+margin_right = 34.583
+margin_top = 10.0
+margin_bottom = 17.0
+
+[sub_resource type="StyleBoxTexture" id=2]
+texture = ExtResource( 1 )
+region_rect = Rect2( 0, 0, 190, 45 )
+margin_left = 33.2071
+margin_right = 33.5845
+margin_top = 16.6036
+margin_bottom = 17.7356
+
+[sub_resource type="StyleBoxTexture" id=3]
+texture = ExtResource( 2 )
+region_rect = Rect2( 0, 0, 190, 49 )
+margin_left = 51.0
+margin_right = 41.0
+margin_top = 15.0
+margin_bottom = 16.0
+
+[sub_resource type="DynamicFont" id=4]
+size = 32
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 72
+outline_size = 4
+outline_color = Color( 0.0431373, 0.0431373, 0.0431373, 1 )
+use_filter = true
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 24
+font_data = ExtResource( 3 )
+
+[node name="MainMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -146.0
+margin_top = -7.33716
+margin_right = 146.0
+margin_bottom = 233.663
+custom_constants/separation = 20
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StartButton" parent="VBoxContainer" instance=ExtResource( 5 )]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 0.0
+margin_top = 0.0
+margin_right = 292.0
+margin_bottom = 67.0
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+custom_fonts/font = SubResource( 4 )
+text = "Play"
+
+[node name="ShopButton" parent="VBoxContainer" instance=ExtResource( 5 )]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 0.0
+margin_top = 87.0
+margin_right = 292.0
+margin_bottom = 154.0
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+custom_fonts/font = SubResource( 4 )
+text = "Shop"
+
+[node name="SettingButton" parent="VBoxContainer" instance=ExtResource( 5 )]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 0.0
+margin_top = 174.0
+margin_right = 292.0
+margin_bottom = 241.0
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+custom_fonts/font = SubResource( 4 )
+text = "Settings"
+
+[node name="Title" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -249.0
+margin_top = 107.625
+margin_right = 249.0
+margin_bottom = 272.625
+custom_fonts/font = SubResource( 5 )
+text = "GAME
+TEMPLATE"
+align = 1
+valign = 1
+
+[node name="Version" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -89.5
+margin_top = -64.4783
+margin_right = 89.5
+margin_bottom = -37.4783
+custom_fonts/font = SubResource( 6 )
+text = "Version  0.1"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
